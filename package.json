@@ -1,6 +1,6 @@
 {
   "name": "ddslack",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "description": "Dice rolls for Dungeons & Dragons games in Slack",
   "license": "GPL-3.0-or-later",
