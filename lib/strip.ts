@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import { PNG } from 'pngjs';
 import { parseStripName } from './assets.js';
 

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import type { AllMiddlewareArgs, SlackEventMiddlewareArgs } from '@slack/bolt';
 import { isExplicitMention, RecentKeys, replyThreadTs } from '../../lib/invocation.js';
 import { LAUNCHER_FALLBACK, launcherBlocks } from '../../lib/messages.js';

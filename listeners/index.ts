@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import type { App } from '@slack/bolt';
 import * as actions from './actions/index.js';
 import * as commands from './commands/index.js';

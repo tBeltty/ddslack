@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import type { AllMiddlewareArgs, BlockButtonAction, SlackActionMiddlewareArgs } from '@slack/bolt';
 import { cooldownMessage } from '../../lib/cooldown.js';
 import { choiceExpression, type FormValues, readPicker, rollTypeProblem } from '../../lib/messages.js';

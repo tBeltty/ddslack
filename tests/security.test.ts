@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import { fileURLToPath } from 'node:url';
 import { mkdtempSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
 import type { AddressInfo } from 'node:net';

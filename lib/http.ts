@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import { createServer, type Server } from 'node:http';
 import { DICE_IMAGE_PREFIX, LEGACY_IMAGE_PREFIXES, readStripPath } from './assets.js';
 import { INSTALL_PATH, type InstallRoutes, REDIRECT_PATH } from './install.js';

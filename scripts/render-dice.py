@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 tBeltty
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 """Renders the die images into assets/dice/ from one 3D style spec.
 
 Usage: python3 scripts/render-dice.py <path-to-bold-font.ttf> [--sheet <contact-sheet.png>]

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import type { webApi } from '@slack/bolt';
 import type { RollMessage } from './roll.js';
 import type { RollTarget } from './target.js';

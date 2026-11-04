@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import type { BlockAction, Logger } from '@slack/bolt';
 import { postToResponseUrl } from '../../lib/publish.js';
 

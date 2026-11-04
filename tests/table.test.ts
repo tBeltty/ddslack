@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import type { Logger } from '@slack/bolt';
 import { describe, expect, it } from 'vitest';
 import type { Rng } from '../lib/dice.js';

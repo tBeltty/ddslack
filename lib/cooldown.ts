@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 /** How long a person waits between two rolls, in milliseconds: enough to stop a flood of clicks, short enough not to notice in play. */
 export const ROLL_COOLDOWN_MS = 3000;
 

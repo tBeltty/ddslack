@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import type { App, MessageShortcut } from '@slack/bolt';
 import { ROLL_HERE_SHORTCUT } from '../../lib/messages.js';
 import { rollHere } from './roll-here.js';

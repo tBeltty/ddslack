@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import { readFileSync } from 'node:fs';
 import { parseEnv } from 'node:util';
 import { LogLevel } from '@slack/bolt';

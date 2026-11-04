@@ -1,3 +1,8 @@
+// SPDX-FileCopyrightText: 2016 Wizards of the Coast LLC
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later AND CC-BY-4.0
+
 import type { HomeView, KnownBlock } from '@slack/types';
 import type { MessageStyle } from './messages.js';
 

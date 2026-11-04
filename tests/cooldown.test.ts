@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { Cooldown, cooldownMessage, ROLL_COOLDOWN_MS } from '../lib/cooldown.js';
 import { encodeTarget } from '../lib/target.js';

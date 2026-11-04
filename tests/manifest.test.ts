@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { BOT_SCOPES, REDIRECT_PATH } from '../lib/install.js';

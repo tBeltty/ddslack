@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import type { App, BlockAction, BlockButtonAction, OverflowAction, RadioButtonsAction } from '@slack/bolt';
 import { MESSAGE_STYLE_ACTION } from '../../lib/home.js';
 import {

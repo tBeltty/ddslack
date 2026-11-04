@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
+
+# SPDX-FileCopyrightText: 2026 tBeltty
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 # Writes the local env file with the Slack tokens, as KEY='value' lines (the format APP_ENV_FILE expects).
 # Input is hidden and never echoed or stored in shell history.
 # Usage: scripts/setup-env.sh [target-file]   (default: ~/secrets/ddslack/local.env)

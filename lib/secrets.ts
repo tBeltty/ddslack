@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import { hkdfSync } from 'node:crypto';
 
 /** One secret in the environment, a separate key for each use, so no key does two jobs. */

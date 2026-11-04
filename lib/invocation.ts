@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 /**
  * The bot only reacts to explicit invocations. Mentions arrive solely through the
  * `app_mention` event (Slack filters them to this bot's user ID); the app never

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import type { BlockAction, ButtonAction } from '@slack/bolt';
 import { describe, expect, it } from 'vitest';
 import { readConfig } from '../lib/config.js';

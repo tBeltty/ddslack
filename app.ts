@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import { join } from 'node:path';
 import { App, type Authorize, SocketModeReceiver, webApi } from '@slack/bolt';
 import { loadDiceImages, setStripKey } from './lib/assets.js';

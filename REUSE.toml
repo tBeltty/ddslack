@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: 2026 tBeltty
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+version = 1
+
+# Files that cannot carry a comment header: data, lockfiles, documentation and generated images.
+[[annotations]]
+path = [
+  "package.json",
+  "pnpm-lock.yaml",
+  "manifest.json",
+  "biome.json",
+  "tsconfig.json",
+  "tsconfig.build.json",
+  "**/*.md",
+  ".github/ISSUE_TEMPLATE/**",
+  ".github/workflows/**",
+  "assets/**",
+  ".env.example",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 tBeltty"
+SPDX-License-Identifier = "GPL-3.0-or-later"

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 /** Where a roll result is published: a channel, optionally a thread, or a slash command response URL. */
 export interface RollTarget {
   channel: string;

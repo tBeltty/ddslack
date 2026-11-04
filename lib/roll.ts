@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import type { KnownBlock } from '@slack/types';
 import { naturalD20, parseDice, type Rng, type RollResult, rollTerms, secureRng, type Term } from './dice.js';
 import {

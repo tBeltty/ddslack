@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import type { AllMiddlewareArgs, BlockAction, RadioButtonsAction, SlackActionMiddlewareArgs } from '@slack/bolt';
 import { homeView } from '../../lib/home.js';
 import { slackErrorCode } from '../../lib/publish.js';

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import { describe, expect, it } from 'vitest';
 import { parseDice, rollTerms, type Rng } from '../lib/dice.js';
 import { escapeMrkdwn, formatRoll, launcherBlocks, readRollForm, rollModal } from '../lib/messages.js';

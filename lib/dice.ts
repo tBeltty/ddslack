@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import { randomInt } from 'node:crypto';
 
 /** Returns an integer between 1 and `sides`, inclusive. */

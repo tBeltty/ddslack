@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2026 tBeltty
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 """Renders the app icon: a 3D d20 from the dice renderer on a dark backdrop.
 
 Usage: python3 scripts/render-avatar.py <path-to-bold-font.ttf> <variant> <output.png>

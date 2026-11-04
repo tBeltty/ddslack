@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 tBeltty
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import type { InstallationStore } from '@slack/oauth';
 import type { Cooldown } from '../lib/cooldown.js';
 import type { Preferences } from '../lib/preferences.js';
