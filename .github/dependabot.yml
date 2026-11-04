@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: 2026 tBeltty
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+version: 2
+updates:
+  # Every merge to main deploys production, so updates arrive grouped, once a week.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      npm-minor-and-patch:
+        update-types: [minor, patch]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]

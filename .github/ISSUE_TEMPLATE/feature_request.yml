@@ -1,0 +1,16 @@
+name: Feature request
+description: Suggest a change to how Dice Companion rolls dice.
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What you want to do
+      description: The situation at your table and what is hard to do today.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: Your idea
+      description: How the app could help. The app covers dice only; character sheets, initiative and scheduling are out of scope.
