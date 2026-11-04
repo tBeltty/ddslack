@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v5
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: pnpm
@@ -44,7 +44,7 @@ jobs:
       CLOUDFLARED_VERSION: 2026.10.7
       CLOUDFLARED_SHA256: 1f99fb518b83dec2ba8d870a7cc991d82a77e6196295a3d2754ba17ab9f91872
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Package the release
         run: tar -czf "$RUNNER_TEMP/release.tgz" --exclude=.git --exclude=node_modules --exclude='.env*' --exclude=./data .
       - name: Install cloudflared
