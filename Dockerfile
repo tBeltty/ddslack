@@ -22,7 +22,7 @@ ENV NODE_ENV=production \
 WORKDIR /app
 COPY --from=prod-deps /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist
-COPY package.json LICENSE ./
+COPY package.json LICENSE NOTICE ./
 COPY assets ./assets
 USER 10001
 EXPOSE 8080
