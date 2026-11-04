@@ -1,0 +1,68 @@
+{
+  "_metadata": {
+    "major_version": 1,
+    "minor_version": 1
+  },
+  "display_information": {
+    "name": "Dice Companion",
+    "description": "Dice rolls for Dungeons & Dragons games in Slack",
+    "background_color": "#2b1d14",
+    "long_description": "Dice Companion rolls dice for Dungeons & Dragons games in Slack. Its bot, Nat20, works in channels, threads and Huddle chats, and it is built for players who are new to the game.\n\nHow it works:\n• Mention @Nat20 in a thread or a Huddle chat and it answers there with a dice picker. Choose the die, how many, your modifier and the type (normal, advantage, disadvantage or critical hit), then press Roll.\n• Type /roll 1d20+5 attack to roll in a channel, /roll stats for a new character's ability scores, or /roll death for a death saving throw.\n• More options adds a target number (DC or AC) that reports Success or Failure, a reason, or a secret roll only you can see.\n\nEach roll shows the die tumbling for about a second, then the result with a picture of the face. A natural 20 is gold and a natural 1 is red. Several dice appear side by side, with every value and the total in the text. Only the newest roll in a thread keeps its picture and picker, and older rolls shrink to one line, so the conversation stays short.\n\nRolls come from a cryptographically secure random generator and are decided when you press the button.\n\nPrivacy: Nat20 answers only when you mention it, type /roll or press its buttons. It reads no channel history and stores no messages: it keeps only each person's message style (Beginner or Expert) and each workspace's installation. Permissions: app_mentions:read to hear its own mentions, chat:write to post rolls, commands for /roll, and reactions:write to celebrate a natural 20 or 1."
+  },
+  "features": {
+    "app_home": {
+      "home_tab_enabled": true,
+      "messages_tab_enabled": false,
+      "messages_tab_read_only_enabled": false
+    },
+    "bot_user": {
+      "display_name": "Nat20",
+      "always_online": true
+    },
+    "shortcuts": [
+      {
+        "name": "Roll dice here",
+        "type": "message",
+        "callback_id": "roll_here",
+        "description": "Roll dice in this message's thread or in the Huddle chat"
+      }
+    ],
+    "slash_commands": [
+      {
+        "command": "/roll",
+        "description": "Roll dice and post the result in the channel",
+        "usage_hint": "1d20+5 reason",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "redirect_urls": [
+      "https://ddslack.tbelt.online/slack/oauth_redirect"
+    ],
+    "scopes": {
+      "bot": [
+        "app_mentions:read",
+        "chat:write",
+        "commands",
+        "reactions:write"
+      ]
+    }
+  },
+  "settings": {
+    "event_subscriptions": {
+      "bot_events": [
+        "app_mention",
+        "app_home_opened",
+        "app_uninstalled",
+        "tokens_revoked"
+      ]
+    },
+    "interactivity": {
+      "is_enabled": true
+    },
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": true,
+    "token_rotation_enabled": false
+  }
+}

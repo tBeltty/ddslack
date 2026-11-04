@@ -1,0 +1,67 @@
+name: CI and deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: deploy-${{ github.repository }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm build
+
+  deploy:
+    needs: test
+    if: github.event_name == 'push' && vars.VPS_DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    env:
+      VPS_DEPLOY_KEY: ${{ secrets.VPS_DEPLOY_KEY }}
+      TUNNEL_SERVICE_TOKEN_ID: ${{ secrets.CF_ACCESS_CLIENT_ID }}
+      TUNNEL_SERVICE_TOKEN_SECRET: ${{ secrets.CF_ACCESS_CLIENT_SECRET }}
+      VPS_DEPLOY_HOST: ${{ vars.VPS_DEPLOY_HOST }}
+      VPS_DEPLOY_USER: ${{ vars.VPS_DEPLOY_USER }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Package the release
+        run: tar -czf "$RUNNER_TEMP/release.tgz" --exclude=.git --exclude=node_modules --exclude='.env*' --exclude=./data .
+      - name: Install cloudflared
+        run: |
+          curl -fsSL -o /usr/local/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+          chmod +x /usr/local/bin/cloudflared
+      - name: SSH config
+        run: |
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "$VPS_DEPLOY_KEY" > ~/.ssh/vps_deploy && chmod 600 ~/.ssh/vps_deploy
+          cat > ~/.ssh/config <<EOF
+          Host vps-deploy
+            HostName $VPS_DEPLOY_HOST
+            User $VPS_DEPLOY_USER
+            IdentityFile ~/.ssh/vps_deploy
+            IdentitiesOnly yes
+            BatchMode yes
+            StrictHostKeyChecking accept-new
+            ProxyCommand cloudflared access ssh --hostname %h
+          EOF
+      - name: Upload and publish
+        run: |
+          id=$(ssh vps-deploy upload < "$RUNNER_TEMP/release.tgz")
+          echo "upload id: $id"
+          ssh vps-deploy publish "$id"

@@ -1,0 +1,36 @@
+{
+  "name": "ddslack",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Dice rolls for Dungeons & Dragons games in Slack",
+  "license": "GPL-3.0-or-later",
+  "author": "tBeltty",
+  "type": "module",
+  "main": "dist/app.js",
+  "scripts": {
+    "dev": "APP_ENV_FILE=${APP_ENV_FILE:-$HOME/secrets/ddslack/local.env} PORT=${PORT:-8787} tsx watch app.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/app.js",
+    "lint": "biome lint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@slack/bolt": "^5.1.0",
+    "@slack/oauth": "^4.0.0",
+    "pngjs": "^7.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.6.4",
+    "@slack/types": "^3.3.0",
+    "@types/node": "^26.6.6",
+    "@types/pngjs": "^6.0.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.5"
+  },
+  "packageManager": "pnpm@11.7.0",
+  "engines": {
+    "node": ">=22"
+  }
+}
